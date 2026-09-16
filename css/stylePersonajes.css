@@ -1,0 +1,643 @@
+/*| + |====================|| RESPONSIVE CARRUSEL Y MODAL ||====================| + |*/
+
+@media (max-width: 1024px) {
+  .carousel-section {
+    padding: 20px 4%;
+  }
+
+  .carousel-wrapper {
+    gap: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .characters-page {
+    padding-top: 140px;
+  }
+
+  .character-card {
+    min-width: 260px;
+    max-width: 280px;
+  }
+
+  .carousel-btn {
+    padding: 10px 14px;
+    font-size: 18px;
+  }
+
+  .carousel-track-container {
+    padding: 15px 10px;
+  }
+
+  /* Ajustes del Modal en Móviles */
+  .modal-contenido {
+    width: 95%;
+    height: auto;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 20px 15px;
+  }
+
+  .modal-cuerpo {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .modal-columna-izquierda {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .modal-imagen-container {
+    width: 220px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .modal-columna-derecha h2 {
+    font-size: 1.4rem;
+  }
+
+  .modal-columna-derecha p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .character-card {
+    min-width: 230px;
+    max-width: 240px;
+  }
+
+  .char-portrait img, .char-gameplay img {
+    height: 140px;
+  }
+
+  .char-single-vertical img {
+    height: 280px;
+  }
+
+  .char-single-rectangular img {
+    height: 170px;
+  }
+
+  .carousel-btn {
+    display: none; /* Oculta botones en móviles para privilegiar el desplazamiento táctil */
+  }
+
+  .carousel-track-container {
+    overflow-x: auto; /* Permite scroll táctil natural con el dedo en teléfonos */
+    scroll-snap-type: x mandatory;
+  }
+
+  .character-card {
+    scroll-snap-align: center;
+  }
+}
+
+.characters-page {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #111111;
+  overflow: hidden;
+}
+
+.characters-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    transparent 48%,
+    rgba(255, 255, 255, 0.02) 48%,
+    rgba(255, 255, 255, 0.02) 50%,
+    transparent 50%
+  );
+  background-size: 30px 30px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.carousel-section {
+  position: relative;
+  padding: 30px 8%;
+  z-index: 2;
+}
+
+.carousel-section::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 80%;
+  background-color: #e50914;
+  opacity: 0.85;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.carousel-section:nth-child(1)::after {
+  right: -10%;
+  bottom: 10%;
+  transform: rotate(-6deg);
+}
+
+.carousel-section:nth-child(2)::after {
+  left: -10%;
+  top: 20%;
+  transform: rotate(6deg);
+}
+
+.carousel-section:nth-child(3)::after {
+  right: -15%;
+  bottom: 0%;
+  transform: rotate(-8deg);
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: -110px;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 35px 35px 25px;
+
+  /* Valores base */
+  --mask-start: 3%;
+  --mask-end: 97%;
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black var(--mask-start),
+    black var(--mask-end),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black var(--mask-start),
+    black var(--mask-end),
+    transparent 100%
+  );
+}
+
+.carousel-track {
+  display: flex;
+  gap: 30px;
+  padding-right: 25px;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/*=========|| Tarjeta individual de personaje ||=========*/
+
+.character-card {
+  min-width: 320px;
+  max-width: 340px;
+  background-color: #181818;
+  border: 3px solid #ffffff;
+  box-shadow: 10px 10px 0 #e50914;
+  transform: skew(-4deg);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.character-card:hover {
+  transform: skew(-4deg) translateY(-8px);
+  box-shadow: 14px 14px 0 #ffffff;
+}
+
+/*=========|| Contenedor de imágenes ||=========*/
+
+.card-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  background-color: #080808;
+  border-bottom: 3px solid #e50914;
+}
+
+.char-portrait,
+.char-gameplay {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #ffffff;
+}
+
+.char-portrait img,
+.char-gameplay img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/*=========|| Información del personaje ||=========*/
+
+.card-info {
+  padding: 20px 15px;
+}
+
+.card-info h3 {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 10px;
+  background-color: #e50914;
+  display: inline-block;
+  padding: 4px 10px;
+  transform: skew(-6deg);
+}
+
+.card-info p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #cccccc;
+}
+
+/*=========|| Botones de navegación del carrusel ||=========*/
+
+.carousel-btn {
+  background-color: #e50914;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 15px 18px;
+  cursor: pointer;
+  transform: skew(-10deg);
+  box-shadow: 4px 4px 0 #ffffff;
+  z-index: 10;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #ffffff;
+  color: #e50914;
+  transform: skew(-10deg) scale(1.1);
+}
+
+/*=========|| Barra de  ||=========*/
+
+.carousel-progress-bar {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 16px;
+  background-color: #000000;
+  margin: 30px auto 0;
+  border: 2px solid #ffffff;
+  transform: skew(-15deg);
+  /* Sombra blanca desfasada igual a la franja separadora */
+  box-shadow: -5px 5px 0 #ffffff;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #e50914;
+  /* Brillo e iluminación estilo P5 en el relleno */
+  box-shadow: 0 0 12px rgba(229, 9, 20, 0.8);
+  transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/*=========|| Imagen única vertical para personajes secundarios ||=========*/
+
+.char-single-vertical {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #ffffff;
+}
+
+.char-single-vertical img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  display: block;
+}
+
+/*=========|| Imagen única rectangular para la sección de villanos ||=========*/
+
+.char-single-rectangular {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #ffffff;
+}
+
+.char-single-rectangular img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/*====================================================================*/
+
+/* ==================== MODAL ESTILO PERSONA 5 ROYAL ==================== */
+
+/* Fondo general oscuro con z-index alto */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.activo {
+  display: flex !important;
+}
+
+/* Marco principal del modal estilo P5R (Negro y Rojo con inclinación) */
+.modal-contenido {
+  background: linear-gradient(-105deg, #000000 50%, #e60012 50%);
+  border: 4px solid #ffffff;
+  box-shadow: 10px 10px 0px #e60012;
+  width: 90%;
+  height: 800px;
+  max-width: 1200px;
+  max-height: 90vh;
+  padding: 30px 25px 25px 25px;
+  position: relative;
+  transform: rotate(-1deg);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Botón de cerrar (X) en la esquina superior derecha */
+.modal-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: 900;
+  color: #ffffff;
+  background-color: #ff0000;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: rotate(5deg);
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.modal-cerrar:hover {
+  background-color: #ffffff;
+  color: #ff0000;
+  transform: rotate(0deg) scale(1.1);
+}
+
+/* Disposición interna */
+.modal-cuerpo {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+/* Columna Izquierda: Imagen y Botón */
+.modal-columna-izquierda {
+  width: 300px;
+  min-width: 300px;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.modal-imagen-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 2/3;
+  background-color: #111111;
+  background-image: url("../images/backgrounds/stars_character.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 3px solid #ffffff;
+  box-shadow: 5px 5px 0px #ff0000;
+  overflow: visible;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.modal-imagen-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* Botón de Acción Estilo P5R */
+.btn-estilo {
+  position: relative;
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 900;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 1px;
+  border: 3px solid #000000;
+  cursor: pointer;
+  /* Inclinación al estilo P5R */
+  transform: skewX(-12deg);
+  /* Sombra sólida inferior por defecto */
+  box-shadow: 4px 4px 0px #ffffff;
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.15s ease;
+  outline: none;
+}
+
+/* Efecto Hover: Cambio de color, desplazamiento y sombra más marcada hacia abajo */
+.btn-estilo:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+  border-color: #ffffff;
+  /* Se desplaza ligeramente hacia arriba e izquierda */
+  transform: skewX(-12deg) translate(-3px, -3px);
+  /* La sombra proyectada hacia abajo a la derecha crece */
+  box-shadow: 7px 7px 0px #ffffff;
+  animation: p5r-shake 0.2s ease-in-out;
+}
+
+/* Efecto Click (Active): Se presiona hacia la sombra */
+.btn-estilo:active {
+  transform: skewX(-12deg) translate(2px, 2px);
+  box-shadow: 2px 2px 0px #ffffff;
+}
+
+/* Micro-animación de temblor rápido al pasar el cursor */
+@keyframes p5r-shake {
+  0% { transform: skewX(-12deg) translate(-3px, -3px); }
+  25% { transform: skewX(-10deg) translate(-5px, -2px); }
+  50% { transform: skewX(-14deg) translate(-1px, -4px); }
+  75% { transform: skewX(-11deg) translate(-4px, -1px); }
+  100% { transform: skewX(-12deg) translate(-3px, -3px); }
+}
+
+/* Columna Derecha: Texto e Información */
+.modal-columna-derecha {
+  flex: 1.5;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Título con parche de contraste negro/blanco */
+.modal-columna-derecha h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #ffffff;
+  display: inline-block;
+  padding: 5px 15px;
+  margin: 0;
+  transform: rotate(-1deg) skewX(-5deg);
+  box-shadow: 4px 4px 0px #ff0000;
+  width: fit-content;
+}
+
+/* Descripción del personaje */
+.modal-columna-derecha p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #dddddd;
+  background-color: rgba(20, 20, 20, 0.9);
+  padding: 15px;
+  border-left: 4px solid #ff0000;
+  margin: 0;
+}
+
+/* Adaptación Responsive */
+@media (max-width: 650px) {
+  .modal-cuerpo {
+    flex-direction: column;
+  }
+  
+  .modal-contenido {
+    transform: rotate(0deg);
+    clip-path: none;
+  }
+}
+
+/* Asegura posicionamiento de los botones dentro de la foto */
+
+.modal-galeria-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.modal-imagen-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  display: block;
+}
+
+/* Botones / Flechas de navegación sobre la imagen */
+.modal-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) skewX(-5deg);
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ff0000;
+  font-size: 1.2rem;
+  font-weight: 900;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 3px 3px 0px #ffffff;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.modal-nav-btn:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+.modal-nav-btn.prev {
+  left: -15px;
+}
+
+.modal-nav-btn.next {
+  right: -15px;
+}
+
+/* Ocultar flechas cuando solo hay 1 imagen */
+.modal-nav-btn.oculto {
+  display: none !important;
+}
+
+/* Contenedor general de especificaciones */
+.modal-specs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 5px 0 10px 0;
+}
+
+/* Fila individual con la barrita roja al frente */
+.spec-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Barrita roja decorativa */
+.spec-bar {
+  width: 6px;
+  height: 22px;
+  background-color: #ff0000;
+  transform: skewX(-10deg);
+  box-shadow: 2px 2px 0px #ffffff;
+  flex-shrink: 0;
+}
+
+/* Texto de la especificación (Arcana / Persona) */
+.spec-text {
+  font-size: 0.9rem;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 4px 10px;
+  border: 1px solid #ff0000;
+  transform: skewX(-5deg);
+  box-shadow: 2px 2px 0px #ffffff;
+  display: inline-block;
+}
+
+.spec-text span {
+  color: #ff0000; /* Resalta las etiquetas ARCANA: y PERSONA: */
+}

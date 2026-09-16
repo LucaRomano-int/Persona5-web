@@ -1,0 +1,52 @@
+/* ==================== ANIMACIONES ==================== */
+
+.hero-content {
+    animation: aparecer 0.8s ease-out;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+/*=========|| DECLARACIÓN DE VARIABLES PARA ANIMAR MÁSCARAS ||=========*/
+
+@property --mask-start {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 3%;
+}
+
+@property --mask-end {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 97%;
+}
+
+/*=========|| TRANSICIÓN DE MÁSCARA DEL CARRUSEL ||=========*/
+
+.carousel-track-container {
+  /* Transición sobre las variables animables */
+  transition: --mask-start 0.3s ease, --mask-end 0.3s ease;
+}
+
+/* Al estar al INICIO: Transiciona el lado izquierdo */
+.carousel-track-container.at-start {
+  --mask-start: 0%;
+  --mask-end: 97%;
+}
+
+/* Al estar al FINAL: Transiciona el lado derecho */
+.carousel-track-container.at-end {
+  --mask-start: 3%;
+  --mask-end: 100%;
+}

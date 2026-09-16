@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Personajes - Persona 5 Royal</title>
+    <link
+      rel="icon"
+      href="images/ui/Phantom-Thieves-of-Hearts-Logo.png"
+      type="image/png"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/stylePersonajes.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+  </head>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <body>
+    <header class="navbar">
+      <a href="index.html" class="logo">
+        <img
+          src="images/ui/Phantom-Thieves-of-Hearts-Logo.png"
+          alt="Persona 5 Royal"
+        />
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">INICIO</a>
+        <a href="personajes.html" class="nav-link active">PERSONAJES</a>
+        <a
+          href="https://store.steampowered.com/app/1687950/Persona_5_Royal/"
+          target="_blank"
+          class="nav-link"
+          >COMPRAR</a
+        >
+      </nav>
+    </header>
+
+    <main class="characters-page">
+      <!-- ==================== PROTAGONISTAS ==================== -->
+
+      <section class="carousel-section">
+        <div class="section-title">
+          <span>01</span>
+          <h2>PROTAGONISTAS</h2>
+        </div>
+
+        <div class="carousel-wrapper">
+          <button
+            class="carousel-btn prev"
+            onclick="moveCarousel('protagonistas', -1)">&#10094;
+          </button>
+
+          <div class="carousel-track-container">
+            <div class="carousel-track" id="protagonistas">
+              <!-- Tarjeta de Personaje inicio -->
+              <div class="character-card"
+                data-modal-img="images/characters/modal_Img/joker_mask.png,images/characters/modal_Img/joker_mementos.png"
+                data-modal-arcana="The Fool"
+                data-modal-persona="Arsène / Satanael"
+                data-modal-desc="Ren Amamiya es un estudiante de secundaria injustamente condenado por agresión tras intervenir para defender a una mujer del acoso de un político influyente. Expulsado de su escuela anterior y puesto en libertad condicional, es enviado a Tokio a vivir con Sojiro Sakura en la cafetería Leblanc y asistir a la Academia Shujin.
+Bajo su apariencia tranquila, reservada y refinada de estudiante de gafas, Ren oculta la identidad de Joker, el carismático y audaz líder de los Ladrones Fantasma. Como portador de la habilidad de la Wild Card, tiene la capacidad única de invocar y fusionar múltiples Personas, lo que lo convierte en la pieza central del equipo. Su viaje simboliza la lucha por la justicia personal frente a un sistema corrupto que margina a los inocentes.">
+                <div class="card-images">
+                  <div class="char-portrait">
+                    <img src="images/characters/cards_Img/joker.png" alt="Joker" />
+                  </div>
+                  <div class="char-gameplay">
+                    <img
+                      src="images/characters/cards_Img/gameplay-joker.png"
+                      alt="Joker en el juego"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>JOKER (REN AMAMIYA)</h3>
+                  <p>
+                    Líder de los Phantom Thieves. Un estudiante de secundaria
+                    que despierta al poder de Persona tras ser falsamente
+                    acusado.
+                  </p>
+                </div>
+              </div>
+              <!-- Tarjeta de Personaje final -->
+              <div class="character-card" 
+                data-modal-img="images/characters/modal_Img/morgana_mementos.png"
+                data-modal-arcana="The Magician"
+                data-modal-persona="Zorro / Mercurius"
+                data-modal-desc="Morgana es una criatura misteriosa con apariencia de gato negro que viste un pañuelo amarillo y que los Ladrones rescatan dentro del primer Palacio (el Metaverso). Aunque en el mundo real se ve obligado a actuar y vivir como un gato común dentro de la mochila de Ren, posee inteligencia humana, habla fluidamente (aunque solo aquellos que han estado en el Metaverso pueden entenderlo) y afirma haber sido humano en el pasado.
+Actúa como el mentor táctico y guía inicial del grupo sobre las reglas del Metaverso. Es orgulloso, sarcástico y extremadamente apasionado por los tesoros, aunque sufre una constante crisis de identidad sobre su origen real y teme no pertenecer a ningún sitio.">
+                <div class="card-images">
+                  <div class="char-portrait">
+                    <img src="images/characters/cards_Img/morgana.png" alt="Morgana" />
+                  </div>
+                  <div class="char-gameplay">
+                    <img
+                      src="images/characters/cards_Img/gameplay-morgana.png"
+                      alt="Morgana en el juego"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>MORGANA (MONA)</h3>
+                  <p>
+                    Una misteriosa criatura con apariencia de gato que sirve
+                    como guía y mentor del grupo en el Metaverso.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card"
+                data-modal-img="images/characters/modal_Img/ryuji_mask.png,images/characters/modal_Img/ryuji_mementos.png"
+                data-modal-arcana="The Chariot"
+                data-modal-persona="Captain Kidd / Seiten Taisei"
+                data-modal-desc='Ryuji es el típico "chico malo" incomprendido y estigmatizado de la Academia Shujin. Antiguo talento del equipo de atletismo, vio sus sueños truncados cuando el abusivo profesor de educación física, Suguru Kamoshida, provocó la disolución del equipo y le fracturó la pierna en un incidente provocado.
+Impulsivo, ruidoso y de sangre caliente, Ryuji es el primer aliado humano de Ren y la fuerza motriz detrás de la formación de los Ladrones Fantasma. A pesar de su actitud ingenua y a veces imprudente, posee un sentido inquebrantable de la lealtad y una devoción total a proteger a los más débiles contra los adultos abusivos.'>
+                
+                <div class="card-images">
+                  <div class="char-portrait">
+                    <img src="images/characters/cards_Img/ryuji.png" alt="Ryuji" />
+                  </div>
+                  <div class="char-gameplay">
+                    <img
+                      src="images/characters/cards_Img/gameplay-ryuji.png"
+                      alt="Ryuji en el juego"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>RYUJI (SKULL)</h3>
+                  <p>
+                    Ex atleta de atletismo y el primer amigo del protagonista en
+                    Shujin. De carácter impulsivo y leal, actúa como el músculo
+                    e iniciador del equipo.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card"
+                data-modal-img="images/characters/modal_Img/ann_mask.png,images/characters/modal_Img/ann_mementos.png"
+                data-modal-arcana="The Lovers"
+                data-modal-persona="Carmen / Hecate"
+                data-modal-desc="Ann es una estudiante de origen estadounidense y modelo a tiempo parcial. Debido a sus rasgos extranjeros y su impresionante belleza, sufre un profundo aislamiento en Shujin, siendo objeto de chismes crueles y de la acosadora atención de Kamoshida. Su única amiga verdadera es Shiho Suzui.
+Cuando el acoso de Kamoshida lleva a Shiho a un intento de suicidio, Ann despierta a su Persona movida por la ira y el deseo de venganza. Tras su atuendo de látex rojo y máscara de felino en el Metaverso, Ann es una joven compasiva, empática y fuerte, decidida a no permitir que nadie vuelva a manipularla o utilizar su apariencia contra ella.">
+                <div class="card-images">
+                  <div class="char-portrait">
+                    <img src="images/characters/cards_Img/ann.png" alt="Ann" />
+                  </div>
+                  <div class="char-gameplay">
+                    <img
+                      src="images/characters/cards_Img/gameplay-ann.png"
+                      alt="Ann en el juego"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>ANN (PHANTER)</h3>
+                  <p>
+                    Compañera de clase de Joker y modelo a tiempo parcial.
+                    Despierta su Persona tras revelarse contra el abuso de
+                    Kamoshida hacia sus compañeros.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card"
+                data-modal-img="images/characters/modal_Img/yosuke_mask.png,images/characters/modal_Img/yosuke_mementos.png"
+                data-modal-arcana="The Emperor"
+                data-modal-persona="Goemon / Kamu Susano-o"
+                data-modal-desc="Yusuke es un estudiante de arte de la Academia Kosei con una personalidad excéntrica, dramática y formal. Quedó huérfano a una edad muy temprana y fue acogido por el famoso pintor Ichiryusai Madarame, a quien Yusuke idolatraba como su salvador y maestro.
+Sin embargo, descubre que Madarame es un fraude que explota a sus alumnos, roba sus obras e incluso dejó morir a la madre de Yusuke para apoderarse de su obra maestra (Sayuri). Al despertar a su Persona, Yusuke canaliza su devoción por la belleza auténtica y la verdad interior para unirse al grupo, trayendo una perspectiva estoica y elegante al equipo.">
+                <div class="card-images">
+                  <div class="char-portrait">
+                    <img src="images/characters/cards_Img/yusuke.png" alt="Yusuke" />
+                  </div>
+                  <div class="char-gameplay">
+                    <img
+                      src="images/characters/cards_Img/gameplay-yusuke.png"
+                      alt="Yusuke en el juego"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>YUSUKE (FOX)</h3>
+                  <p>
+                    Estudiante de arte en la Academia Kosei y apasionado de la
+                    estética. Se une al grupo tras descubrir la corrupción de su
+                    maestro, Madarame.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card"
+                data-modal-img="images/characters/modal_Img/makoto_mask.png,images/characters/modal_Img/makoto_mementos.png"
+                data-modal-arcana="The Priestess"
+                data-modal-persona="Johanna / Anat"
+                data-modal-desc="Makoto es la presidenta del consejo estudiantil de Shujin y la hermana menor de la estricta fiscal Sae Niijima. Inicialmente vista como una estudiante modélica, fría y obediente que cumple todas las expectativas de los adultos, Makoto vive bajo una inmensa presión académica y familiar.
+Tras ser manipulada por el director de la escuela para investigar a los Ladrones Fantasma y topársela con la amenaza de la mafia de Junya Kaneshiro, Makoto rompe sus cadenas de sumisión. Al despertar a su Persona (una motocicleta), se convierte en la estratega y cerebro táctico del grupo. Es experta en artes marciales y muestra un lado imponente y temible cuando se enfada.">
+                <div class="card-images">
+                  <div class="char-portrait">
+                    <img src="images/characters/cards_Img/makoto.png" alt="Makoto" />
+                  </div>
+                  <div class="char-gameplay">
+                    <img
+                      src="images/characters/cards_Img/gameplay-makoto.png"
+                      alt="Makoto en el juego"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>MAKOTO (QUEEN)</h3>
+                  <p>
+                    Presidenta del consejo estudiantil de Shujin y hermana menor
+                    de Sae. Es la mente táctica y cerebro operativo de los
+                    Phantom Thieves.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card"
+                data-modal-img="images/characters/modal_Img/futaba_mask.png,images/characters/modal_Img/futaba_mementos.png"
+                data-modal-arcana="The Hermit"
+                data-modal-persona="Necronomicon / Prometheus"
+                data-modal-desc='Futaba es la hija adoptiva de Sojiro Sakura. Es un genio de la informática y una hacker legendaria conocida en la red como "Alibaba". Sufre de agorafobia severa y estrés postraumático debido a la manipulación psicológica de adultos corruptos, quienes le hicieron creer que ella fue la responsable de la trágica muerte de su madre, Wakaba Isshiki.
+El Palacio de Futaba es único, ya que ella misma es quien invoca al grupo a su mente para salvarse. Una vez superado su trauma y liberada de su culpa, se convierte en la navegante y soporte logístico de los Ladrones, aportando análisis de datos, defensas en combate y un humor cargado de referencias geek y videojuegos.'>
+                <div class="card-images">
+                  <div class="char-portrait">
+                    <img src="images/characters/cards_Img/futaba.png" alt="Futaba" />
+                  </div>
+                  <div class="char-gameplay">
+                    <img
+                      src="images/characters/cards_Img/gameplay-futaba.png"
+                      alt="Futaba en el juego"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>FUTABA (ORACLE)</h3>
+                  <p>
+                    Una genio de la informática con fobia social. Hija adoptiva
+                    de Sojiro, actúa como el soporte logístico y navegadora en
+                    el Metaverso.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card"
+                data-modal-img="images/characters/modal_Img/haru_mask.png,images/characters/modal_Img/haru_mementos.png"
+                data-modal-arcana="The Empress"
+                data-modal-persona="Milady / Astarte"
+                data-modal-desc="Haru es una estudiante de tercer año e hija de Kunikazu Okumura, el ambicioso presidente de la corporación Okumura Foods. A pesar de su crianza privilegiada, amabilidad y afición por la jardinería, Haru vive aislada y es tratada por su padre como una pieza de intercambio político a través de un matrimonio concertado con un prometido abusivo.
+En el Metaverso, Haru adopta la estética de una mosquetera victoriana equipada con hachas y lanzagranadas. Su despertar refleja la liberación de su voluntad y el rechazo a ser un objeto utilizable por los demás, mostrando una mezcla entre delicadeza educada y una ferocidad refinada en batalla.">
+                <div class="card-images">
+                  <div class="char-portrait">
+                    <img src="images/characters/cards_Img/haru.png" alt="Haru" />
+                  </div>
+                  <div class="char-gameplay">
+                    <img
+                      src="images/characters/cards_Img/gameplay-haru.png"
+                      alt="Haru en el juego"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>HARU (NOIR)</h3>
+                  <p>
+                    Hija del presidente de Okumura Foods. De modales amables y
+                    afición por la jardinería, se alía al grupo para oponerse al
+                    matrimonio forzado que le exige su padre.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card"
+                data-modal-img="images/characters/modal_Img/akechi_mask.png,images/characters/modal_Img/akechi_mementos.png"
+                data-modal-arcana="Justice"
+                data-modal-persona="Robin Hood / Loki"
+                data-modal-desc='Akechi es un famoso detective de secundaria aclamado por los medios como "el regreso del Príncipe Detective". Inteligente, educado y carismático, actúa públicamente como el principal rival ideológico y perseguidor legal de los Ladrones Fantasma, argumentando que cambiar el corazón de la gente es una violación del libre albedrío.
+En Persona 5 Royal, se profundiza enormemente en su compleja relación con Ren y en su oscuro pasado como hijo ilegítimo rechazado por la sociedad. Akechi representa el reverso de la moneda de Joker: una figura trágica y manipulada cuyo deseo de justicia está empañado por la venganza y el aislamiento.'>
+                <div class="card-images">
+                  <div class="char-portrait">
+                    <img src="images/characters/cards_Img/akechi.png" alt="Akechi" />
+                  </div>
+                  <div class="char-gameplay">
+                    <img
+                      src="images/characters/cards_Img/gameplay-akechi.png"
+                      alt="Akechi en el juego"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>AKECHI (CROW)</h3>
+                  <p>
+                    Famoso detective juvenil. Inicialmente se presenta como un
+                    rival opuesto a los Phantom Thieves, compartiendo una
+                    compleja relación de alianza y antagonismo con Joker.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card"
+                data-modal-img="images/characters/modal_Img/sumire_mask.png,images/characters/modal_Img/sumire_mementos.png"
+                data-modal-arcana="Faith"
+                data-modal-persona="Cendrillon / Vanadis"
+                data-modal-desc="Introducida en la versión Royal, es una gimnasta rítmica de élite que ingresa a Shujin con una beca de honor. Aunque admira profundamente a Ren y entabla una cálida amistad con él, inicialmente no apoya los métodos de los Ladrones Fantasma, prefiriendo resolver sus problemas mediante el esfuerzo personal.
+Su historia esconde uno de los giros más emocionales del juego respecto a su verdadera identidad, el duelo y los sacrificios de la culpa. Su despertar a Violet aporta un estilo de combate elegante y letal, convirtiéndose en una aliada crucial durante los eventos del semestre adicional del juego (el Palacio de Maruki).">
+                <div class="card-images">
+                  <div class="char-portrait">
+                    <img src="images/characters/cards_Img/sumire.png" alt="Sumire" />
+                  </div>
+                  <div class="char-gameplay">
+                    <img
+                      src="images/characters/cards_Img/gameplay-sumire.png"
+                      alt="Sumire en el juego"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>SUMIRE (VIOLET)</h3>
+                  <p>
+                    Prometedora gimnasta de primer año en Shujin. Durante gran
+                    parte de la historia se la conoce como Kasumi, guardando una
+                    profunda lucha de identidad y trauma que se revela en el
+                    tercer semestre de Persona 5 Royal.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <button 
+          class="carousel-btn next" 
+          onclick="moveCarousel('protagonistas', 1)">&#10095;
+        </button>
+        </div>
+
+      <div class="carousel-progress-bar">
+        <div 
+          class="progress-fill" id="progress-protagonistas">
+        </div>
+      </div>
+
+      </section>
+
+      <!-- ==================== SECUNDARIOS ==================== -->
+
+      <section class="carousel-section">
+        <div class="section-title">
+          <span>02</span>
+          <h2>PERSONAJES SECUNDARIOS</h2>
+        </div>
+
+        <div class="carousel-wrapper">
+          <button
+            class="carousel-btn prev"
+            onclick="moveCarousel('secundarios', -1)">&#10094;
+          </button>
+
+          <div class="carousel-track-container">
+            <div class="carousel-track" id="secundarios">
+              <!-- Tarjeta de Personaje Secundario inicio-->
+              <div class="character-card">
+                <div class="card-images">
+                  <div class="char-single-vertical">
+                    <img src="images/characters/npc/igor.png" alt="Igor" />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>IGOR</h3>
+                  <p>
+                    Misterioso maestro de la Velvet Room con una nariz
+                    prominente. Guía al protagonista en su camino de
+                    rehabilitación y destino.
+                  </p>
+                </div>
+              </div>
+              <!-- Tarjeta de Personaje Secundario final-->
+              <div class="character-card">
+                <div class="card-images">
+                  <div class="char-single-vertical">
+                    <img
+                      src="images/characters/npc/sakura.png"
+                      alt="Sojiro Sakura"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>SOJIRO SAKURA</h3>
+                  <p>
+                    Propietario del café Leblanc y tutor legal del protagonista
+                    durante su período de libertad condicional en Tokio.
+                  </p>
+                </div>
+              </div>
+              <div class="character-card">
+                <div class="card-images">
+                  <div class="char-single-vertical">
+                    <img
+                      src="images/characters/npc/Sae-Niijima.png"
+                      alt="Sae Niijima"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>SAE NIIJIMA</h3>
+                  <p>
+                    Fiscal de la Fiscalía del Distrito de Tokio y hermana mayor
+                    de Makoto Niijima.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card">
+                <div class="card-images">
+                  <div class="char-single-vertical">
+                    <img
+                      src="images/characters/npc/Chihaya-mifune.png"
+                      alt="Chihaya Mifune"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>CHIHAYA MIFUNE</h3>
+                  <p>
+                    Una adivina de Shinjuku que utiliza cartas de Tarot para
+                    predecir el futuro de sus clientes con sorprendente
+                    precisión.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card">
+                <div class="card-images">
+                  <div class="char-single-vertical">
+                    <img
+                      src="images/characters/npc/Caroline-y-Justine.png"
+                      alt="Caroline y Justine"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>CAROLINE Y JUSTINE</h3>
+                  <p>
+                    Guardias gemelas de la Velvet Room. Vigilan la
+                    rehabilitación del protagonista y gestionan las fusiones de
+                    Personas.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card">
+                <div class="card-images">
+                  <div class="char-single-vertical">
+                    <img
+                      src="images/characters/npc/Munehisa-Iwai.png"
+                      alt="Munehisa Iwai"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>MUNEHISA IWAI</h3>
+                  <p>
+                    Ex yakuza y dueño de la tienda de armas de aire comprimido
+                    Untouchable en Shinjuku. Modifica equipamiento para el
+                    grupo.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card">
+                <div class="card-images">
+                  <div class="char-single-vertical">
+                    <img
+                      src="images/characters/npc/tea-takemi.png"
+                      alt="Tea Takemi"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>TAE TAKEMI</h3>
+                  <p>
+                    Médica con un estilo punk que dirige su propia clínica en
+                    Yonchome. Suministra medicinas experimentales a los Phantom
+                    Thieves.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card">
+                <div class="card-images">
+                  <div class="char-single-vertical">
+                    <img
+                      src="images/characters/npc/Sadayo-Kawakami.png"
+                      alt="Sadayo Kawakami"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>SADAYO KAWAKAMI</h3>
+                  <p>
+                    Tutora del protagonista en la preparatoria Shujin. Para
+                    saldar una deuda personal, trabaja en secreto como sirvienta
+                    a domicilio.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card">
+                <div class="card-images">
+                  <div class="char-single-vertical">
+                    <img
+                      src="images/characters/npc/Ichiko-Ohya.png"
+                      alt="Ichiko Ohya"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>ICHIKO OHYA</h3>
+                  <p>
+                    Periodista de prensa rosa que frecuenta el bar Lala
+                    Escargot. Busca la verdad tras la desaparición de su antigua
+                    compañera.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card">
+                <div class="card-images">
+                  <div class="char-single-vertical">
+                    <img
+                      src="images/characters/npc/Oda-Shinya.png"
+                      alt="Oda Shinya"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>ODA SHINYA</h3>
+                  <p>
+                    Joven talentoso conocido como el "King" de los juegos de
+                    disparos en los salones arcade de Akihabara.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card">
+                <div class="card-images">
+                  <div class="char-single-vertical">
+                    <img
+                      src="images/characters/npc/Hifumi-Togo.png"
+                      alt="Hifumi Togo"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>HIFUMI TOGO</h3>
+                  <p>
+                    Estudiante de la Academia Kosei y jugadora profesional de
+                    Shogi. Practica sus tácticas de juego en la iglesia de
+                    Kanda.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card">
+                <div class="card-images">
+                  <div class="char-single-vertical">
+                    <img
+                      src="images/characters/npc/Yuuki-Mishima.png"
+                      alt="Yuuki Mishima"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>YUUKI MISHIMA</h3>
+                  <p>
+                    Compañero de clase del protagonista que administra el
+                    "Phansite", la página web donde los ciudadanos envían
+                    peticiones a los Phantom Thieves.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-btn next"
+            onclick="moveCarousel('secundarios', 1)">&#10095;
+          </button>
+        </div>
+
+      <div class="carousel-progress-bar">
+        <div 
+          class="progress-fill" id="progress-secundarios">
+        </div>
+      </div>
+
+      </section>
+
+      <!-- ==================== VILLANOS ==================== -->
+      <section class="carousel-section">
+        <div class="section-title">
+          <span>03</span>
+          <h2>VILLANOS</h2>
+        </div>
+
+        <div class="carousel-wrapper">
+          <button
+            class="carousel-btn prev"
+            onclick="moveCarousel('villanos', -1)">&#10094;
+          </button>
+
+          <div class="carousel-track-container">
+            <div class="carousel-track" id="villanos">
+              <!-- Tarjeta de Villano 1 -->
+              <div class="character-card">
+                <div class="card-images">
+                  <div class="char-single-rectangular">
+                    <img
+                      src="images/characters/villanos/kamoshida.png"
+                      alt="Kamoshida"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>SUGURU KAMOSHIDA</h3>
+                  <p>
+                    Antiguo medallista olímpico y profesor de educación física
+                    en la Preparatoria Shujin. Utiliza su estatus para abusar
+                    físicamente de los alumnos del equipo de voleibol y acosar a
+                    las estudiantes.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card">
+                <div class="card-images">
+                  <div class="char-single-rectangular">
+                    <img
+                      src="images/characters/villanos/maradame.png"
+                      alt="Madarame"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>ICHIRYUSAI MADARAME</h3>
+                  <p>
+                    Renombrado maestro de arte tradicional japonés que acoge a
+                    jóvenes talentos como discípulos para plagiar sus obras,
+                    atribuirse el mérito de su trabajo y desecharlos cuando ya
+                    no le son útiles.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card">
+                <div class="card-images">
+                  <div class="char-single-rectangular">
+                    <img
+                      src="images/characters/villanos/kaneshiro.png"
+                      alt="kaneshiro"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>JUNYA KANESHIRO</h3>
+                  <p>
+                    Líder mafioso sin escrupulos que opera en el distrito de
+                    Shibuya. Extorsiona a estudiantes de secundaria mediante
+                    engaños y amenazas para meterlos en deudas e introducirlos
+                    en redes de trabajo ilegal.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card">
+                <div class="card-images">
+                  <div class="char-single-rectangular">
+                    <img
+                      src="images/characters/villanos/okumura.png"
+                      alt="Okumura"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>KUNIKAZU OKUMURA</h3>
+                  <p>
+                    Presidente y CEO de Okumura Foods (cadena de restaurantes
+                    Big Bang Burger) y padre de Haru. Explotador laboral que ve
+                    a sus empleados como recursos desechables y busca ascender
+                    en la política sacrificando el futuro de su propia hija.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card">
+                <div class="card-images">
+                  <div class="char-single-rectangular">
+                    <img
+                      src="images/characters/villanos/shido.png"
+                      alt="Shido"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>MASAYOSHI SHIDO</h3>
+                  <p>
+                    Político influyente y ambicioso que maneja la corrupción
+                    tras bambalinas en el gobierno de Japón. Es el responsable
+                    de la falsa acusación que inició la condicional del
+                    protagonista y el autor intelectual de las perturbaciones
+                    cognitivas.
+                  </p>
+                </div>
+              </div>
+
+              <div class="character-card">
+                <div class="card-images">
+                  <div class="char-single-rectangular">
+                    <img
+                      src="images/characters/villanos/maruki.png"
+                      alt="Maruki"
+                    />
+                  </div>
+                </div>
+                <div class="card-info">
+                  <h3>TAKUTO MARUKI</h3>
+                  <p>
+                    Consejero escolar e investigador de psicología cognitiva
+                    introducido en Shujin. A través de su distorsionada visión
+                    de la compasión, busca reescribir la realidad para erradicar
+                    el sufrimiento creando un mundo donde todos vivan una
+                    ilusión perfecta sin dolor.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-btn next"
+            onclick="moveCarousel('villanos', 1)"
+          >
+            &#10095;
+          </button>
+        </div>
+
+      <div class="carousel-progress-bar">
+        <div 
+          class="progress-fill" id="progress-villanos">
+        </div>
+      </div>
+
+      </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+      <p>Proyecto realizado con HTML, CSS y JavaScript.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+      <div id="modal-personaje" class="modal">
+        <div class="modal-contenido">
+          <span class="modal-cerrar">&times;</span>
+          <div class="modal-cuerpo">
+            
+            <!-- COLUMNA IZQUIERDA -->
+            <div class="modal-columna-izquierda">
+              <div class="modal-imagen-container">
+                <button id="modal-prev-galleria" class="modal-nav-btn prev">&#10094;</button>
+                <img id="modal-img" src="" alt="Imagen de personaje">
+                <div id="modal-overlay-swipe" class="modal-overlay-swipe"></div>
+                <button id="modal-next-galleria" class="modal-nav-btn next">&#10095;</button>
+              </div>
+              
+              <button id="modal-btn-accion" class="btn-estilo">PERSONA!</button>
+            </div><!-- /modal-columna-izquierda -->
+
+            <!-- COLUMNA DERECHA -->
+            <div class="modal-columna-derecha">
+              <h2 id="modal-titulo">Nombre del Personaje</h2>
+              <div 
+                id="modal-specs" class="modal-specs-container">
+              </div>
+              <p id="modal-descripcion">Descripción detallada del personaje...</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+  </body>
+</html>
